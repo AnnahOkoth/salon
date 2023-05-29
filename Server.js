@@ -1,24 +1,12 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const salonRoutes = require('./Routes/salonRoutes');
-
-// Create Express application
 const app = express();
-const port = process.env.PORT || 3000;
+const db = require('./db');
+const routes = require('./Routes');
 
-// Connect to MongoDB
-mongoose.connect('mongodb+srv://huaweiuser:Digital2018@cluster0.nmprp6j.mongodb.net/Salon', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-// Middleware
 app.use(express.json());
+app.use('/api', routes);
 
-// Routes
-app.use('/api', salonRoutes);
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
