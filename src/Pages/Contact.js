@@ -1,8 +1,10 @@
 import React from 'react';
+import Navbar from '../Components/Navbar';
 
 function Contact () {
   return (
     <div className="container mx-auto p-8">
+      <Navbar />
       <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
       <p className="text-gray-600 mb-6">
         We'd love to hear from you! If you have any questions or inquiries,

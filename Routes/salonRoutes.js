@@ -3,7 +3,7 @@ const router = express.Router();
 const Salon = require('../Models/Salon');
 
 // Route to fetch all salons
-router.get('/salons', async (req, res) => {
+router.get('/Sample', async (req, res) => {
   try {
     const salons = await Salon.find();
     res.json(salons);
@@ -13,7 +13,7 @@ router.get('/salons', async (req, res) => {
 });
 
 // Route to create a new salon
-router.post('/salons', async (req, res) => {
+router.post('/Sample', async (req, res) => {
   try {
     const salon = new Salon(req.body);
     await salon.save();
