@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 function Hero() {
   return (
     <div className="flex flex-col lg:flex-row text-green-800 rounded-sm bg-red-100  items-center justify-evenly min-h-screen ">
