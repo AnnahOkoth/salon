@@ -1,68 +1,42 @@
-import React from 'react';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { auth } from "../firebase";
 
-class Register extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      password: '',
-    };
-  }
+const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  handleInputChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+  const Register = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  handleRegister = (event) => {
-    event.preventDefault();
-    // Perform registration logic, e.g., make an API call to register the user
-    // You can use a state management library like Redux to handle the API calls and state management
-  };
-
-  render() {
-    const { name, email, password } = this.state;
-
-    return (
-      <div>
-        <h2>Register</h2>
-        <form onSubmit={this.handleRegister}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={password}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <button type="submit">Register</button>
-        </form>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="sign-in-container">
+      <form onSubmit={Register}>
+        <h1>Create Account</h1>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        ></input>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        ></input>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  );
+};
 
 export default Register;
