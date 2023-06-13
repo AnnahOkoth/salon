@@ -4,7 +4,7 @@ import { collection,getDocs } from 'firebase/firestore'
 
 export default  function Booknow() {
     const odd=[]
-    const [Booknow,setBooknow]=useState([])
+    const [setBooknow]=useState([])
     useEffect(() => {
         async function fetchData() {
             const querySnapshot = await getDocs(collection(db, "Booknow"));

@@ -6,8 +6,8 @@ import { collection, addDoc } from "firebase/firestore";
 function Services() {
   const handleCheckOut=async()=>{
     const Haircut = "Haircut";
-    const docRef = await addDoc(collection(db, "orders"), {
-      name: "Pietro Maestro",
+    const docRef = await addDoc(collection(db, "Booknow"), {
+      name: "Annah Awuor",
       title:Haircut,
       Description:'Professional haircut by experienced stylists',
       price:'$30'
