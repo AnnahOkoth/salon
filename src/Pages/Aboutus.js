@@ -7,24 +7,17 @@ function Aboutus() {
       <Navbar />
       <h1 className="text-3xl font-bold mb-4">About Us</h1>
       <p className="text-gray-600 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut eros
-        at lorem vulputate dignissim. Proin feugiat nibh vel mauris commodo
-        lacinia. Fusce lacinia lacus ac lacus suscipit varius. Nam eleifend
-        tellus in arcu consectetur fermentum.
+        Welcome to our website! We are a team of dedicated professionals committed to providing exceptional services to our valued customers.
       </p>
       <p className="text-gray-600 mb-6">
-        Fusce non ullamcorper ipsum. Nulla posuere gravida ligula eu commodo.
-        Curabitur tempus diam ac leo elementum, in placerat erat commodo. Sed
-        eget aliquam ex. Sed sit amet ex ac tortor ultrices dapibus.
+        Our mission is to create an enjoyable experience for every client. We strive to deliver outstanding results and exceed expectations.
       </p>
       <p className="text-gray-600 mb-6">
-        Mauris vitae ante quis nibh tristique ullamcorper at eget mauris. Donec
-        rutrum vestibulum eros, in euismod mauris vulputate vitae. Vestibulum
-        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-        Curae; Nullam at nunc sed orci facilisis tincidunt vel vitae felis.
+        With years of expertise and a passion for what we do, we are confident in our ability to meet your needs and leave you satisfied.
       </p>
     </div>
   );
 }
 
 export default Aboutus;
+
