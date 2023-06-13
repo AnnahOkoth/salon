@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 
-function AboutUs() {
+function Aboutus() {
   return (
     <div className="container mx-auto p-8">
       <Navbar />
@@ -27,4 +27,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default Aboutus;

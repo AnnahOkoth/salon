@@ -27,10 +27,10 @@ const Navbar = () => {
                 Services
               </a>
               <a
-                href="about"
+                href="aboutus"
                 className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
               >
-                About Us
+                Aboutus
               </a>
               <a
                 href="contact"
@@ -50,12 +50,7 @@ const Navbar = () => {
               >
                 Login
               </a>
-              <a
-                href="booknow"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Book Now
-              </a>
+              
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -116,7 +111,7 @@ const Navbar = () => {
             Services
           </a>
           <a
-            href="about"
+            href="aboutus"
             className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
           >
             About Us
@@ -126,12 +121,6 @@ const Navbar = () => {
             className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
           >
             Contact
-          </a>
-          <a
-            href="booknow"
-            className="text-white hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Book Now
           </a>
         </div>
       </div>
