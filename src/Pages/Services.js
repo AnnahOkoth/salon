@@ -1,6 +1,19 @@
 import React from 'react';
+import {db} from '../firebase';
+import { collection, addDoc } from "firebase/firestore"; 
+
 
 function Services() {
+  const handleCheckOut=async()=>{
+    const Haircut = "Haircut";
+    const docRef = await addDoc(collection(db, "orders"), {
+      name: "Pietro Maestro",
+      title:Haircut,
+      Description:'Professional haircut by experienced stylists',
+      price:'$30'
+    });
+    console.log("Document written with ID: ", docRef.id);
+  }
   const services = [
     {
       id: 1,
@@ -37,7 +50,9 @@ function Services() {
             <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
             <p className="text-gray-600 mb-4">{service.description}</p>
             <p className="text-gray-800 font-semibold">{service.price}</p>
-            <button className="bg-blue-500 text-white rounded-full px-4 py-2 mt-4">
+            <button className="bg-blue-500 text-white rounded-full px-4 py-2 mt-4"
+             onClick={handleCheckOut}
+            >
               Book Now
             </button>
           </div>

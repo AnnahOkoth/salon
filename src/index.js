@@ -9,6 +9,7 @@ import Services from "./Pages/Services";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Home from "./Components/Home";
+import Booknow from "./Pages/Booknow.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/Services" element={<Services />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="Booknow.js" element={<Booknow/>} />
       </Routes>
     </Router>
   </React.StrictMode>
