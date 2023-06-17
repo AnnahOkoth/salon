@@ -1,10 +1,9 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
+
 
 function Aboutus() {
   return (
     <div className="container mx-auto p-8">
-      <Navbar />
       <h1 className="text-3xl font-bold mb-4">About Us</h1>
       <p className="text-gray-600 mb-6">
         Welcome to our website! We are a team of dedicated professionals committed to providing exceptional services to our valued customers.
